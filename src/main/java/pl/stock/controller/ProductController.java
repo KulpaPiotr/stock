@@ -19,4 +19,9 @@ public class ProductController {
     public List<ProductDto> getProducts() {
         return productService.getAllProducts();
     }
+
+    @PostMapping("/create")
+    public ProductDto createProduct(@RequestBody ProductCreateDto productCreateDto) {
+        return productService.createProduct(productCreateDto);
+    }
 }
